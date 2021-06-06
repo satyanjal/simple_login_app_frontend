@@ -1,0 +1,13 @@
+FROM nginx:1.19.7-alpine
+
+MAINTAINER Satyanjal Prakash version: 1.0
+
+RUN  mkdir -p /application/react-ui
+
+WORKDIR /application/react-ui
+
+COPY login_App
+
+EXPOSE 3000
+
+CMD ["nginx", "-g", "daemon off;"]
